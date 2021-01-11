@@ -1,0 +1,35 @@
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion Versions.compileSdk
+    defaultConfig {
+        minSdkVersion Versions.minSdk
+        targetSdkVersion Versions.targetSdk
+        versionCode Releases.versionCode
+        versionName Releases.versionName
+
+        // api url
+        buildConfigField 'String', 'BASE_URL', '"http://www.omdbapi.com"'
+
+        // Token in gradle.properties file
+        buildConfigField "String", 'TOKEN', "\"${TOKEN}\""
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation KotlinLibraries.kotlin
+}

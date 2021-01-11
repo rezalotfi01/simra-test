@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SimraTest-Reza</string>
+    <string name="error_happened">Error : Something wrong happen</string>
+
+    <string name="search_movie_hint">Enter Movie Name Here</string>
+    <string name="no_items">No Items in database, enter movie name to add</string>
+    <string name="share">Share</string>
+
+    <string name="transition_poster_orig" translatable="false">transition_poster_orig</string>
+    <string name="transition_poster_dest" translatable="false">transition_poster_dest</string>
+</resources>
